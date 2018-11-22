@@ -1,0 +1,25 @@
+Drill report for C:\Users\lucid80\Desktop\데이터 취득 장비\ver3\snuadc\snuadc.kicad_pcb
+Created on 2016-03-24 오전 10:08:29
+Drill report for plated through holes :
+T1  0.50mm  0.020"  (3 holes)  (with 3 slots)
+T2  0.64mm  0.025"  (75 holes)
+T3  0.76mm  0.030"  (2 holes)
+T4  0.81mm  0.032"  (8 holes)
+T5  1.00mm  0.039"  (2 holes)
+T6  1.02mm  0.040"  (15 holes)
+T7  1.30mm  0.051"  (2 holes)
+T8  2.30mm  0.091"  (1 hole)
+T9  3.05mm  0.120"  (2 holes)
+
+Total plated holes count 110
+
+
+Drill report for unplated through holes :
+T1  1.50mm  0.059"  (1 hole)
+T2  2.30mm  0.091"  (1 hole)
+T3  2.50mm  0.098"  (2 holes)
+T4  6.50mm  0.256"  (4 holes)
+
+Total unplated holes count 8
+
+

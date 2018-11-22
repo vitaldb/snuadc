@@ -1,0 +1,58 @@
+' ******************************************************************************
+' swxJRNL.swj - journal recorded on 05/14/16 by 이형철
+' *****************************************************************************
+Dim swApp As Object
+
+Dim Part As Object
+Dim boolstatus As Boolean
+Dim longstatus As Long, longwarnings As Long
+
+Sub main()
+
+Set swApp = _
+Application.SldWorks
+
+Set Part = swApp.OpenDoc6("D:\하드웨어\데이터 취득 장비\케이스 앞뒤판\frontback.SLDPRT", 1, 0, "", longstatus, longwarnings)
+swApp.ActivateDoc2 "frontback.SLDPRT", False, longstatus
+Set Part = swApp.ActiveDoc
+Set Part = swApp.ActiveDoc
+Dim myModelView As Object
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 0
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Part.SketchManager.InsertSketch True
+boolstatus = swApp.SetUserPreferenceIntegerValue(swUserPreferenceIntegerValue_e.swDxfOutputFonts, 0)
+boolstatus = swApp.SetUserPreferenceIntegerValue(swUserPreferenceIntegerValue_e.swDxfOutputLineStyles, 1)
+longstatus = Part.SaveAs3("D:\frontback.DXF", 0, 0)
+Set Part = swApp.ActiveDoc
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 21
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set Part = swApp.NewDocument("C:\ProgramData\SolidWorks\SolidWorks 2013\templates\도면.drwdot", 0, 0, 0)
+swApp.ActivateDoc2 "도면1 - 시트1", False, longstatus
+Set Part = swApp.ActiveDoc
+Set Part = swApp.ActiveDoc
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 0
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+swApp.ActivateDoc2 "frontback.SLDPRT", False, longstatus
+Set Part = swApp.ActiveDoc
+Dim myView As Object
+Set myView = Part.CreateDrawViewFromModelView3("D:\하드웨어\데이터 취득 장비\케이스 앞뒤판\frontback.SLDPRT", "*현재", 0, 0, 0)
+boolstatus = Part.DeleteNamedView(*현재)
+Part.ClearSelection2 True
+' MSGBOX
+' frontback.SLDPRT의 변경 사항을 저장하시겠습니까?
+
+swApp.ExitApp
+End Sub

@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name snuadc-rescue)(type Legacy)(uri ${KIPRJMOD}/snuadc-rescue.lib)(options "")(descr ""))
+  (lib (name pj213)(type Legacy)(uri ${KIPRJMOD}/pj213.lib)(options "")(descr ""))
+)
